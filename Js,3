@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in JS</title>
+</head>
+<body>
+
+    <h1>Array in JS</h1>
+
+    <p><strong>Elements inside the array:</strong></p>
+
+    <label for="puts">Enter a Number:</label>
+    <input type="number" id="puts">
+
+    <button id="kapoy">Insert</button>
+    <button id="kapoyna">Delete All</button>
+
+    <p id="elements"></p>
+
+    <p>Sum: <span id="sum"></span></p>
+    <p>Highest: <span id="high"></span></p>
+    <p>Lowest: <span id="low"></span></p>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
+
