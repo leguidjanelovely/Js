@@ -1,0 +1,56 @@
+const input = document.getElementById("puts");
+const insertBtn = document.getElementById("kapoy");
+const deleteBtn = document.getElementById("kapoyna");
+
+const elementTxt = document.getElementById("elements");
+const sumTxt = document.getElementById("sum");
+const highTxt = document.getElementById("high");
+const lowTxt = document.getElementById("low");
+
+let arr = [];
+
+function displayArray() {
+
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    elementTxt.innerHTML = arr.join("<br>");
+    sumTxt.innerHTML = sum;
+
+    if (arr.length > 0) {
+        let high = Math.max(...arr);
+        let low = Math.min(...arr);
+
+        highTxt.innerHTML = high;
+        lowTxt.innerHTML = low;
+    } else {
+        highTxt.innerHTML = "";
+        lowTxt.innerHTML = "";
+        sumTxt.innerHTML = 0;
+    }
+}
+
+insertBtn.addEventListener("click", function () {
+
+    let value = Number(input.value);
+
+    if (input.value === "") {
+        alert("Please enter a number.");
+        return;
+    }
+
+    arr.push(value);
+    input.value = "";
+
+    displayArray();
+});
+
+deleteBtn.addEventListener("click", function () {
+
+    arr = [];
+    displayArray();
+
+});
